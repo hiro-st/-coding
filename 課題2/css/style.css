@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* cssリセット */
+html,
+body,
+h1,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #000;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 問1,2 */
+
+.flex {
+    max-width: 960px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex>div {
+    background: #00f;
+    width: 31.25%;
+    height: 300px;
+}
+
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.wrap>div {
+    background: #f00;
+    width: 31.25%;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+/* 問3 menu*/
+header {
+    max-width: 960px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav>ul {
+    display: flex;
+}
+
+nav>ul>li {
+    padding: 0 30px;
+    border-right: solid 1px;
+}
+
+nav>ul>li:nth-of-type(5) {
+    border-right: none;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav>ul {
+        flex-direction: column;
+    }
+
+    nav>ul>li {
+        border-right: none;
+        border-bottom: solid 1px;
+        padding: 10px 0;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+}
