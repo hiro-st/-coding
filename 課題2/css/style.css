@@ -72,11 +72,14 @@ nav>ul>li:nth-of-type(5) {
 
 @media screen and (max-width: 767px) {
     header {
-        flex-direction: column;
+        /* flex-direction: column; */
+        display: block;
+        padding: 10px;
     }
 
     nav>ul {
-        flex-direction: column;
+        /* flex-direction: column; */
+        display: block;
     }
 
     nav>ul>li {
