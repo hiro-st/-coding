@@ -37,23 +37,21 @@ h1 {
     width: 100%;
 }
 
-h2{
+.text {
+    margin-left: 10px;
+}
+
+h2 {
     color: #377a6d;
     border-left: solid 10px;
-    margin-left: 10px;
     padding: 0 5px;
 }
 
-p{
-    margin-left: 10px;
-    
-}
-
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
     .items {
         display: block;
     }
-    
+
     .item {
         margin-right: 0;
         margin: 0 3% 30px;
