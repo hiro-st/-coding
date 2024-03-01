@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cafe site</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -23,10 +23,29 @@
                     <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
+
+            <div class="hamburger">
+                <span></span>
+            </div>
+
+            <nav class="sp-nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
         </div>
 
         <div class="slider">
-            <p><img src="images/pc_first-100.jpg" alt="カフェの様子"></p>
+            <picture>
+                <source srcset="images/sp_main_vs@2x-100.jpg" media="(max-width: 767px)">
+                <img src="images/pc_first-100.jpg" alt="デザインカフェ　店内の様
+            子">
+            </picture>
+
         </div>
     </header>
 
@@ -47,12 +66,14 @@
 
         <section id="about">
             <div class="wrapper">
+                <p class="sp-about-logo"><img src="images/about_us@2x.png" alt="私たちについて"></p>
+
                 <p class="coffee-img"><img src="images/pc_about-100.jpg" alt="コーヒーカップで乾杯する様子"></p>
 
                 <div class="about-inner">
-                    <p class="about-logo"><img src="images/about_us@2x.png" alt="私たちについて"></p>
-                    <h3>私たちが提供する<br>
-                        こだわりのコーヒー</h3>
+                    <h3 class="about-logo"><img src="images/about_us@2x.png" alt="私たちについて"></h3>
+                    <h4>私たちが提供する<br>
+                        こだわりのコーヒー</h4>
                     <p class="about-text">
                         サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
                     </p>
@@ -62,7 +83,7 @@
 
         <section id="menu">
             <div class="wrapper">
-                <p class="section-title menu-logo"><img src="images/menu@2x.png" alt="メニュー"></p>
+                <h3 class="section-title menu-logo"><img src="images/menu@2x.png" alt="メニュー"></h3>
 
                 <div class="menu-items">
                     <div class="menu-inner">
@@ -93,12 +114,12 @@
         </section>
 
         <section id="gallery">
-            <p class="section-title gallery-logo"><img src="images/gallery@2x.png" alt="ギャラリー"></p>
+            <h3 class="section-title gallery-logo"><img src="images/gallery@2x.png" alt="ギャラリー"></h3>
         </section>
 
         <section id="event">
             <div class="wrapper">
-                <p class="section-title event-logo"><img src="images/event@2x.png" alt="イベント"></p>
+                <h3 class="section-title event-logo"><img src="images/event@2x.png" alt="イベント"></h3>
 
                 <ul>
                     <li>
@@ -118,7 +139,7 @@
         </section>
 
         <section id="access">
-            <p class="section-title access-logo"><img src="images/access@2x.png" alt="アクセス"></p>
+            <h3 class="section-title access-logo"><img src="images/access@2x.png" alt="アクセス"></h3>
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.790100532469!2d139.87781401084138!3d35.63290073251407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60187d03114737b3%3A0xe4d93636d509d3cb!2z5p2x5Lqs44OH44Kj44K644OL44O844Op44Oz44OJ!5e0!3m2!1sja!2sjp!4v1707952247159!5m2!1sja!2sjp"
@@ -130,7 +151,7 @@
     <footer>
         <div class="wrapper">
             <div class="footer-inner">
-                <p class="footer-logo"><img src="images/design_cafe_logo_footer@2x.png" alt=""></p>
+                <h3 class="footer-logo"><img src="images/design_cafe_logo_footer@2x.png" alt=""></h3>
                 <div class="footer-access">
                     <p>OPEN 18:00 / CLOSE 24:00</p>
                     <p>〒150-0022</p>

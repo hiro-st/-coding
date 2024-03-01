@@ -10,6 +10,7 @@ section,
 h1,
 h2,
 h3,
+h4,
 ul,
 li,
 p,
@@ -95,6 +96,11 @@ img {
     width: 100%;
 }
 
+.sp-nav,
+.hamburger {
+    display: none;
+}
+
 /* main */
 main {
     background: #e8d9bf;
@@ -157,6 +163,10 @@ main {
     display: flex;
 }
 
+.sp-about-logo {
+    display: none;
+}
+
 .coffee-img img {
     width: 500px;
     border-radius: 0 0 82.37px 0;
@@ -168,10 +178,14 @@ main {
 
 .about-logo img {
     width: 272.39px;
-    margin: 60px 0;
+    margin-bottom: 60px;
 }
 
-.about-inner h3 {
+.about-inner {
+    text-align: center;
+}
+
+.about-inner h4 {
     font-size: 44px;
     font-weight: normal;
     line-height: 1.38;
@@ -220,6 +234,7 @@ main {
 }
 
 .menu-detail {
+    line-height: 1.47;
     max-width: 300px;
     margin-top: 43px;
 }
@@ -265,41 +280,324 @@ main {
     padding-top: 80px;
 }
 
-.access-logo img{
+.access-logo img {
     width: 213px;
     margin-bottom: 48px;
 }
 
-iframe{
+iframe {
     width: 100%;
     height: 470px;
     vertical-align: bottom;
 }
 
 /* footer */
-footer{
+footer {
     padding: 80px 0;
 }
 
-.footer-inner{
+.footer-inner {
     display: flex;
 }
 
-.footer-logo img{
+.footer-logo img {
     width: 226px;
 }
 
-.footer-access{
+.footer-access {
     font-size: 20px;
     margin-left: 8%;
 }
 
-.footer-access p{
+.footer-access p {
     line-height: 1.95;
 }
 
-.copyright{
+.copyright {
     font-size: 16px;
     text-align: center;
     margin-top: 68px;
+}
+
+@media screen and (max-width:1100px) {
+    .pc-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        cursor: pointer;
+        height: 33px;
+        z-index: 999;
+    }
+
+    .hamburger span {
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .hamburger span::before,
+    .hamburger span::after {
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        content: "";
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .hamburger span::before {
+        bottom: 10px;
+    }
+
+    .hamburger span::after {
+        top: 10px;
+    }
+
+    .open span {
+        background: transparent;
+    }
+
+    .open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    .sp-nav {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .sp-nav ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .sp-nav ul li {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .sp-nav ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .heading p:first-child {
+        font-size: 21px;
+    }
+
+    .heading h2 {
+        font-size: 57px;
+    }
+
+    .heading p:nth-of-type(2) {
+        font-size: 16px;
+        line-height: 1.875;
+        letter-spacing: 0.1em;
+    }
+
+    .about-inner h4 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .heading {
+        padding-top: 40px;
+    }
+
+    #about,
+    #menu {
+        padding-top: 60px;
+    }
+
+    #gallery {
+        padding-top: 90px;
+    }
+
+    #event,
+    #access {
+        padding-top: 30px;
+    }
+
+    /* heading */
+    .heading p:first-child {
+        font-size: 17px;
+    }
+
+    .heading h2 {
+        font-size: 38px;
+        line-height: 1.157;
+        letter-spacing: 0.02em;
+        margin-top: 27px;
+        margin-bottom: 20px;
+    }
+
+    /* about */
+    .about-logo {
+        display: none;
+    }
+
+    .sp-about-logo {
+        display: block;
+    }
+
+    .sp-about-logo img {
+        width: 160px;
+        margin-bottom: 15px;
+    }
+
+    #about .wrapper {
+        display: block;
+    }
+
+    #about {
+        text-align: center;
+    }
+
+    .coffee-img img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .coffee-img {
+        margin-right: 0;
+    }
+
+    .about-inner h4 {
+        margin-top: 35px;
+        font-size: 36px;
+        line-height: 1.25;
+        margin-bottom: 27px;
+        text-align: left;
+    }
+
+    .about-text {
+        line-height: 1.75;
+        max-width: 767px;
+        text-align: left;
+    }
+
+    /* menu */
+    .menu-items {
+        display: block;
+    }
+
+    .menu-logo img {
+        width: 87px;
+        margin-bottom: 30px;
+    }
+
+    .menu-item img {
+        width: 100%;
+    }
+
+    .menu-inner {
+        margin-right: 0;
+        margin-bottom: 58px;
+    }
+
+    .menu-inner:nth-of-type(3) {
+        margin-bottom: 0;
+    }
+
+    .food-list {
+        font-size: 40px;
+    }
+
+    .menu-detail {
+        font-size: 17px;
+        line-height: 1.588;
+        max-width: 767px;
+        margin-top: 53px;
+    }
+
+    /* gallery */
+    .gallery-logo img {
+        width: 142px;
+    }
+
+    /* event */
+    .event-logo img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    #event ul {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    #event ul li {
+        display: block;
+    }
+
+    #event ul li p {
+        margin-right: 0;
+    }
+
+    #event ul li a {
+        text-overflow: ellipsis;
+    }
+
+    /* 効いていない */
+
+    /* access */
+    .access-logo img {
+        width: 124px;
+        margin-bottom: 10px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 191px;
+    }
+
+    /* footer */
+    footer {
+        padding: 38px 0 33px;
+    }
+
+    .footer-inner {
+        display: block;
+    }
+
+    .footer-logo img {
+        width: 226px;
+    }
+
+    .footer-access {
+        font-size: 18px;
+        margin-left: 0;
+    }
+
+    .footer-access p {
+        line-height: 1.722;
+    }
+
+    .copyright {
+        margin-top: 43px;
+    }
 }
