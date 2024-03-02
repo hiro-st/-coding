@@ -158,6 +158,15 @@ main {
     line-height: 1.65;
 }
 
+.break {
+    display: none;
+}
+
+.non-break {
+    display: block;
+}
+
+
 /* about */
 #about .wrapper {
     display: flex;
@@ -167,22 +176,18 @@ main {
     display: none;
 }
 
-.coffee-img img {
+#about picture img {
     width: 500px;
     border-radius: 0 0 82.37px 0;
 }
 
-.coffee-img {
-    margin-right: 8%;
+.about-inner {
+    margin-left: 8%;
 }
 
 .about-logo img {
     width: 272.39px;
     margin-bottom: 60px;
-}
-
-.about-inner {
-    text-align: center;
 }
 
 .about-inner h4 {
@@ -424,8 +429,20 @@ footer {
 }
 
 @media screen and (max-width:767px) {
+    .logo {
+        width: 187px;
+    }
+
+    .to-top img {
+        width: 100px;
+    }
+
     .heading {
         padding-top: 40px;
+    }
+
+    .break {
+        display: block;
     }
 
     #about,
@@ -455,6 +472,10 @@ footer {
         margin-bottom: 20px;
     }
 
+    .heading .wrapper {
+        padding: 0;
+    }
+
     /* about */
     .about-logo {
         display: none;
@@ -477,13 +498,18 @@ footer {
         text-align: center;
     }
 
-    .coffee-img img {
+    #about picture img {
         width: 100%;
         border-radius: 0;
     }
 
-    .coffee-img {
-        margin-right: 0;
+    #about .wrapper {
+        padding: 0px;
+    }
+
+    .about-inner {
+        margin-left: 0;
+        padding: 0 10px;
     }
 
     .about-inner h4 {
@@ -560,9 +586,10 @@ footer {
 
     #event ul li a {
         text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
     }
-
-    /* 効いていない */
 
     /* access */
     .access-logo img {

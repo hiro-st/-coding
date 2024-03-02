@@ -40,4 +40,10 @@ $(function () {
         });
     });
 
+    $(function () {
+        $('.sp-nav').on('click', function () {
+            $('.hamburger').removeClass('open');
+        });
+    });
+
 });
